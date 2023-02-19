@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/edgar/submission/{cik}', [SubmissionsController::class, 'get']);
+Route::get('/edgar/submission', [SubmissionsController::class, 'post']);
