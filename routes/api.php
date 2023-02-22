@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SubmissionsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/edgar/submission/{cik}', [SubmissionsController::class, 'get']);
-Route::get('/edgar/submission', [SubmissionsController::class, 'post']);
+Route::get('/edgar/submission', [SubmissionsController::class, 'all']);
+Route::post('/edgar/submission', [SubmissionsController::class, 'post']);
