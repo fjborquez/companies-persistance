@@ -1,4 +1,4 @@
-service: laravel-submissions
+service: laravel-companies
 
 provider:
     name: aws
